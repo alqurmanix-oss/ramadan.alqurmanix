@@ -289,4 +289,4 @@ main { position: relative; z-index: 2; max-width: 1040px; margin: -112px auto 0;
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  }
+}
