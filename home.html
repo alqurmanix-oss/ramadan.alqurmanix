@@ -3,10 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AQX Ramadan — مواقيت وإمساكية رمضان 1448 هـ</title>
+<title>AQX Ramadan — مواقيت وإمساكية رمضان</title>
 <meta name="description" content="اختر دولتك ومدينتك واحصل على مواقيت رمضان اليوم والإمساكية الكاملة، بطرق حساب متعددة.">
-<link rel="canonical" href="https://ramadan.alqurmanix.com/home.html">
-<meta property="og:title" content="AQX Ramadan — إمساكية رمضان 1448 هـ">
+<link rel="canonical" href="https://ramadan.alqurmanix.com/">
+<link rel="alternate" hreflang="ar" href="https://ramadan.alqurmanix.com/">
+<link rel="alternate" hreflang="x-default" href="https://ramadan.alqurmanix.com/">
+<meta property="og:title" content="AQX Ramadan — إمساكية رمضان">
 <meta property="og:description" content="مواقيت رمضان اليوم والإمساكية الكاملة لمدينتك.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -15,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AQX Ramadan","url":"https://ramadan.alqurmanix.com/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AQX Ramadan","alternateName":["إمساكية رمضان AQX","AQX Ramadan Timetable"],"url":"https://ramadan.alqurmanix.com/","inLanguage":"ar","publisher":{"@type":"Organization","name":"ALQURMANI X"},"potentialAction":{"@type":"SearchAction","target":"https://ramadan.alqurmanix.com/timetable.html?city={city_id}","query-input":"required name=city_id"}}</script>
 <style>
 :root{--ivory:#FBF7EC;--paper:#FFFDF7;--ink:#0F3B33;--soft:#52716A;--em:#0B7A5C;--em2:#12A07A;--gold:#C9A24B;--gold2:#E8CF86;--aqua:#2BB8B0;--line:rgba(201,162,75,.35);--glass:rgba(255,253,247,.72)}
 *{box-sizing:border-box;margin:0}
@@ -94,6 +96,22 @@ footer{text-align:center;color:var(--soft);font-size:.82rem;padding:20px 0 40px;
 .hero>div:first-child{animation:in .9s both}
 @keyframes in{from{opacity:0;transform:translateY(18px)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+@media(max-width:640px){body::after{opacity:.22}}
+#rg[hidden]{display:none}
+.rb{font:inherit;margin-inline-start:8px;padding:4px 14px;border-radius:99px;border:1px solid var(--gold);background:#fff;color:var(--em);cursor:pointer}
+.ghost{background:var(--glass)!important;color:var(--em)!important;border:1px solid var(--line);box-shadow:none!important;width:100%;font-family:inherit;cursor:pointer;margin-top:10px;padding:13px}
+.ghost::after{display:none}
+.rm{margin:0 0 30px;padding:32px 18px;border-radius:34px;text-align:center;background:linear-gradient(150deg,rgba(255,255,255,.92),rgba(232,207,134,.3));border:1px solid var(--line);box-shadow:0 40px 70px -40px rgba(11,122,92,.4)}
+.rm h2{font-size:clamp(1.5rem,4.5vw,2.2rem)}
+.rm p{color:var(--soft);margin:6px auto 0}
+.units{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;max-width:640px;margin:20px auto 0}
+.units div{padding:14px 4px;border-radius:20px;background:#fff;border:1px solid var(--line)}
+.units b{display:block;font-family:'Reem Kufi';font-size:clamp(1.5rem,6vw,2.4rem);line-height:1.2;color:var(--em);font-variant-numeric:tabular-nums}
+.units small{color:var(--soft);font-size:.8rem}
+#up{position:fixed;left:18px;bottom:calc(18px + env(safe-area-inset-bottom));width:52px;height:52px;border-radius:50%;border:1.5px solid var(--gold);background:linear-gradient(145deg,var(--em),var(--aqua));display:grid;place-items:center;cursor:pointer;box-shadow:0 16px 30px -12px var(--em);opacity:0;transform:translateY(20px) scale(.8);pointer-events:none;transition:.35s;z-index:15}
+#up.on{opacity:1;transform:none;pointer-events:auto}
+footer a{margin:0 8px;color:var(--em)}
 </style>
 </head>
 <body>
@@ -108,7 +126,7 @@ footer{text-align:center;color:var(--soft);font-size:.82rem;padding:20px 0 40px;
 <header>
 <a class="brand" href="home.html">
 <span class="logo"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="#FFF3C8"/><path d="M18 5l.8 1.7 1.7.8-1.7.8L18 10l-.8-1.7-1.7-.8 1.7-.8z" fill="#fff"/></svg></span>
-<span><b>AQX Ramadan</b><small>رمضان 1448 هـ · <span id="gy">2027</span> م</small></span>
+<span><b>AQX Ramadan</b><small id="hd">رمضان</small></span>
 </a>
 <button class="menu" id="mb" aria-label="فتح القائمة" aria-expanded="false"><span></span></button>
 </header>
@@ -120,8 +138,9 @@ footer{text-align:center;color:var(--soft);font-size:.82rem;padding:20px 0 40px;
 <p class="lead">اختر مكانك لتعرف موعد الإمساك والإفطار اليوم، ثم افتح الإمساكية الكاملة للشهر.</p>
 <div class="picker">
 <div><label for="co">الدولة</label><select id="co"></select></div>
+<div id="rg" hidden><label for="re">المحافظة / المنطقة</label><select id="re"></select></div>
 <div><label for="ci">المدينة</label><select id="ci"></select></div>
-<div class="full"><label for="me">طريقة الحساب</label><select id="me"></select></div>
+<div><label for="me">طريقة الحساب</label><select id="me"></select></div>
 </div>
 </div>
 
@@ -140,92 +159,132 @@ footer{text-align:center;color:var(--soft);font-size:.82rem;padding:20px 0 40px;
 <div class="times" id="times"></div>
 <div class="note" id="note"></div>
 <a class="cta" href="timetable.html" id="cta">عرض إمساكية رمضان كاملة</a>
+<button class="cta ghost" id="sh" type="button">مشاركة إمساكية مدينتك</button>
 <div class="meta"><span id="mm">الطريقة: —</span><span id="mz">المنطقة الزمنية: —</span><span id="ms">المصدر: —</span></div>
 </section>
 </main>
+
+<section class="rm" id="rm"><h2 id="rt">رمضان</h2><p id="rd"></p>
+<div class="units"><div><b id="u0">0</b><small>شهر</small></div><div><b id="u1">0</b><small>يوم</small></div><div><b id="u2">0</b><small>ساعة</small></div><div><b id="u3">0</b><small>دقيقة</small></div><div><b id="u4">0</b><small>ثانية</small></div></div></section>
 
 <section class="feat">
 <a href="world.html"><h3>رمضان حول العالم</h3><p>من القارة إلى الدولة إلى المدينة، ثم الإمساكية.</p></a>
 <a href="compare.html"><h3>قارن طرق الحساب</h3><p>شاهد الفرق بين الطرق جنبًا إلى جنب لنفس اليوم.</p></a>
 <a href="embed.html"><h3>أضفها إلى موقعك</h3><p>أنشئ ودجت جاهزًا وانسخ الكود في دقيقة.</p></a>
 </section>
-<footer>AQX Ramadan · الأوقات تأتي من AQX Prayer API وقد تختلف النتائج باختلاف طريقة الحساب.</footer>
+<footer><a href="timetable.html">الإمساكية</a><a href="world.html">حول العالم</a><a href="compare.html">المقارنة</a><a href="settings.html">الإعدادات</a><a href="embed.html">Embed</a><a href="about.html">عن المنصة</a><p>الأوقات تأتي من AQX Prayer API وقد تختلف النتائج باختلاف طريقة الحساب.</p></footer>
+<button id="up" aria-label="العودة للأعلى"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 </div>
 
 <script>
 const API="https://script.google.com/macros/s/AKfycbww-gJc4j_jqR7JbrwZzXbaicQCZO-AwCRitUNokKi9vn3UPczTWvPPyvPPjiTAtmM/exec";
-const RAMADAN_START="2027-02-18"; // تقريبي، يُستبدل بقيمة action=ramadan عند توفرها
 const $=id=>document.getElementById(id);
 const LBL=[["imsak","الإمساك"],["fajr","الفجر"],["sunrise","الشروق"],["dhuhr","الظهر"],["asr","العصر"],["maghrib","المغرب"],["isha","العشاء"],["midnight","منتصف الليل"]];
-const DEMO={cities:[{id:"CAI_EG",co:"EG",coName:"مصر",name:"القاهرة",tz:"Africa/Cairo"},{id:"MKK_SA",co:"SA",coName:"السعودية",name:"مكة المكرمة",tz:"Asia/Riyadh"}],methods:[{id:"EG_SURVEY",name:"الهيئة المصرية العامة للمساحة"}],
-times:{imsak:"05:03",fajr:"05:13",sunrise:"06:41",dhuhr:"12:04",asr:"15:15",maghrib:"17:37",isha:"18:56",midnight:"23:10"}};
-let S={cities:[],methods:[],city:null,method:null,times:null,source:"",demo:false,day:1,pre:0};
+const ORDER=["imsak","fajr","sunrise","dhuhr","asr","maghrib","isha"];
+const ISO="AD AE AF AG AL AM AO AR AT AU AZ BA BB BD BE BF BG BH BI BJ BN BO BR BS BT BW BY BZ CA CD CF CG CH CI CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG ER ES ET FI FJ FM FR GA GB GD GE GH GM GN GQ GR GT GW GY HK HN HR HT HU ID IE IL IN IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MG MH MK ML MM MN MR MT MU MV MW MX MY MZ NA NE NG NI NL NO NP NR NZ OM PA PE PG PH PK PL PS PT PW PY QA RO RS RU RW SA SB SC SD SE SG SI SK SL SM SN SO SR SS ST SV SY SZ TD TG TH TJ TL TM TN TO TR TT TV TW TZ UA UG US UY UZ VA VC VE VN VU WS XK YE ZA ZM ZW".split(" ");
+const DN=new Intl.DisplayNames(["ar"],{type:"region"}),isIso=c=>/^[A-Z]{2}$/.test(c);
+const flag=c=>String.fromCodePoint(...[...c].map(x=>127397+x.charCodeAt(0)));
+const cname=c=>{try{return isIso(c)?DN.of(c):c}catch(e){return c}};
+let S={cities:[],methods:[],start:null,city:null,times:null,tom:null,day:1,pre:true,tk:0};
 
-async function api(q){const r=await fetch(API+"?action="+q);if(!r.ok)throw new Error(r.status);return r.json()}
+async function api(action,params={}){const u=new URL(API);u.searchParams.set("action",action);for(const[k,v]of Object.entries(params))u.searchParams.set(k,v);const r=await fetch(u);if(!r.ok)throw new Error(r.status);return r.json()}
 const firstArr=o=>Array.isArray(o)?o:Object.values(o||{}).find(Array.isArray)||[];
-const pick=(o,ks)=>{for(const k of ks){const f=Object.keys(o).find(x=>x.toLowerCase()===k);if(f&&o[f]!=null)return o[f]}return ""};
+const pick=(o,ks)=>{for(const k of ks){const f=Object.keys(o).find(x=>x.toLowerCase()===k);if(f&&o[f]!=null&&o[f]!=="")return o[f]}return ""};
 function flat(o,out={}){for(const k in o){const v=o[k];if(v&&typeof v==="object")flat(v,out);else out[k.toLowerCase()]=v}return out}
-function parseTimes(d){const f=flat(d),t={};const al={sunrise:["sunrise","shuruq"],dhuhr:["dhuhr","zuhr","duhr"],midnight:["midnight","midnight_islamic"]};
-for(const[k]of LBL){const names=al[k]||[k];for(const n of names){const v=f[n];if(typeof v==="string"&&/\d{1,2}:\d{2}/.test(v)){t[k]=v.match(/\d{1,2}:\d{2}/)[0].padStart(5,"0");break}}}return t}
+function parseTimes(d){const f=flat(d),t={},al={sunrise:["sunrise","shuruq"],dhuhr:["dhuhr","zuhr","duhr"],midnight:["midnight"]};
+for(const[k]of LBL){for(const n of al[k]||[k]){const v=f[n];if(typeof v==="string"&&/\d{1,2}:\d{2}/.test(v)){t[k]=v.match(/\d{1,2}:\d{2}/)[0].padStart(5,"0");break}}}return t}
+const addDays=(s,n)=>{const d=new Date(s+"T00:00:00Z");d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)};
+function parseStart(d){const rows=firstArr(d);let l=(rows.length?rows:Object.values(d||{}).filter(v=>v&&typeof v==="object")).map(x=>({s:String(pick(x,["start_date","start","ramadan_start","first_day"])).slice(0,10)})).filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x.s));
+ if(!l.length){const s=String(flat(d||{}).start_date||"").slice(0,10);if(/^\d{4}-\d{2}-\d{2}$/.test(s))l=[{s}]}
+ l.sort((a,b)=>a.s<b.s?-1:1);const t=new Date().toISOString().slice(0,10);return l.find(x=>addDays(x.s,30)>=t)||null}
+const note=h=>{const n=$("note");n.innerHTML=h;n.classList.add("on")};
+const unnote=()=>$("note").classList.remove("on");
+const fail=m=>{S.times=null;render();note(m+' <button class="rb" onclick="boot()">إعادة المحاولة</button>')};
 
 async function boot(){
- try{
-  const[c,m]=await Promise.all([api("cities"),api("methods")]);
-  S.cities=firstArr(c).map(x=>({id:pick(x,["city_id","id"]),co:pick(x,["country_id"]),coName:pick(x,["country_name_ar","country_ar","country_name","country_id"]),name:pick(x,["name_ar","arabic_name","city_ar","name_en"]),tz:pick(x,["timezone","tz"])})).filter(x=>x.id);
+ unnote();
+ try{const[c,m,r]=await Promise.all([api("cities"),api("methods"),api("ramadan").catch(()=>null)]);
+  S.cities=firstArr(c).map(x=>({id:pick(x,["city_id","id"]),co:pick(x,["country_id"]),re:pick(x,["region_ar","region"]),name:pick(x,["name_ar","arabic_name","city_ar","name_en"]),tz:pick(x,["timezone","tz"])})).filter(x=>x.id);
   S.methods=firstArr(m).map(x=>({id:pick(x,["method_id","id","code"]),name:pick(x,["name_ar","name","name_en","label"])})).filter(x=>x.id);
-  if(!S.cities.length||!S.methods.length)throw 0;
- }catch(e){S.cities=DEMO.cities;S.methods=DEMO.methods;S.demo=true;
-  note("تعذر تحميل البيانات من الخادم حاليًا. المعروض بيانات تجريبية وليست مواقيت AQX الرسمية.")}
- const cos=[...new Map(S.cities.map(x=>[x.co,x.coName||x.co])).entries()];
- $("co").innerHTML=cos.map(([k,v])=>`<option value="${k}">${v}</option>`).join("");
- const eg=cos.find(x=>x[0]==="EG");if(eg)$("co").value="EG";
+  if(!S.cities.length||!S.methods.length)throw 0;S.start=r?parseStart(r):null;
+ }catch(e){return fail("تعذر الاتصال بخدمة المواقيت حاليًا.")}
+ const have=new Set(S.cities.map(x=>x.co));
+ const all=[...new Set([...ISO,...have])].map(c=>({c,n:cname(c)})).sort((a,b)=>a.n.localeCompare(b.n,"ar"));
+ const opt=a=>a.map(x=>`<option value="${x.c}">${isIso(x.c)?flag(x.c)+" ":""}${x.n}</option>`).join("");
+ $("co").innerHTML=`<optgroup label="متاحة الآن">${opt(all.filter(x=>have.has(x.c)))}</optgroup><optgroup label="كل دول العالم">${opt(all.filter(x=>!have.has(x.c)))}</optgroup>`;
  $("me").innerHTML=S.methods.map(x=>`<option value="${x.id}">${x.name||x.id}</option>`).join("");
- const sv=localStorage.getItem("aqx_city");fillCities(sv);load();
+ let sv={};try{sv=JSON.parse(localStorage.getItem("aqx_loc")||"{}")}catch(e){}
+ const first=[...have][0];$("co").value=have.has(sv.co)?sv.co:have.has("EG")?"EG":first;
+ if(sv.me&&S.methods.find(x=>x.id===sv.me))$("me").value=sv.me;
+ onCountry(sv);tickRm();
 }
-function fillCities(pref){const l=S.cities.filter(x=>x.co===$("co").value);$("ci").innerHTML=l.map(x=>`<option value="${x.id}">${x.name}</option>`).join("");
- if(pref&&l.find(x=>x.id===pref))$("ci").value=pref;else{const c=l.find(x=>x.id==="CAI_EG");if(c)$("ci").value=c.id}}
-function note(t){const n=$("note");n.textContent=t;n.classList.add("on")}
+function onCountry(sv){
+ const co=$("co").value,l=S.cities.filter(x=>x.co===co);
+ if(!l.length){S.city=null;S.times=null;$("rg").hidden=true;$("ci").innerHTML="";$("cn").textContent=cname(co);$("cc").textContent="";render();return note("لا توجد مدن لهذه الدولة في قاعدة AQX حتى الآن، وستظهر هنا تلقائيًا فور إضافتها.")}
+ unnote();
+ const rs=[...new Set(l.map(x=>x.re).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"ar"));
+ $("rg").hidden=rs.length<2;$("re").innerHTML='<option value="">كل المناطق</option>'+rs.map(r=>`<option>${r}</option>`).join("");
+ if(sv&&sv.re&&rs.includes(sv.re))$("re").value=sv.re;fillCities(sv);
+}
+function fillCities(sv){const re=$("re").value,l=S.cities.filter(x=>x.co===$("co").value&&(!re||x.re===re));
+ $("ci").innerHTML=l.map(x=>`<option value="${x.id}">${x.name}</option>`).join("");
+ if(sv&&sv.ci&&l.find(x=>x.id===sv.ci))$("ci").value=sv.ci;load()}
 
 async function load(){
- S.city=S.cities.find(x=>x.id===$("ci").value)||S.cities[0];S.method=S.methods.find(x=>x.id===$("me").value)||S.methods[0];
- try{localStorage.setItem("aqx_city",S.city.id)}catch(e){}
- const tz=S.city.tz||"UTC",now=new Date(),today=new Intl.DateTimeFormat("en-CA",{timeZone:tz}).format(now);
- const diff=Math.round((new Date(today)-new Date(RAMADAN_START))/864e5);
- S.pre=diff<0?-diff:0;S.day=Math.min(30,Math.max(1,diff+1));
- $("cta").href=`timetable.html?city=${encodeURIComponent(S.city.id)}&method=${encodeURIComponent(S.method.id)}`;
- $("cn").textContent=S.city.name;$("cc").textContent=S.city.coName||"";
- $("dn").textContent=S.day;$("dl").textContent=S.pre?"معاينة اليوم 1":"يوم رمضان";
- $("mm").textContent="الطريقة: "+(S.method.name||S.method.id);$("mz").textContent="المنطقة الزمنية: "+tz;
- $("dh").textContent=S.pre?`يبدأ رمضان 1448 هـ بعد ${S.pre} يومًا تقريبًا`:`رمضان 1448 هـ`;
- $("dg").textContent=new Intl.DateTimeFormat("ar-EG",{timeZone:tz,dateStyle:"full"}).format(now);
- if(!S.demo){document.getElementById("note").classList.remove("on");
-  try{const d=await api(`prayer&city=${S.city.id}&method=${S.method.id}&day=${S.day}`);S.times=parseTimes(d);S.source="AQX Prayer API";
-   if(!S.times.maghrib||!S.times.fajr)throw 0}
-  catch(e){S.times=null;note("تعذر تحميل مواقيت هذه المدينة من الخادم حاليًا.");}
- }else{S.times=DEMO.times;S.source="بيانات تجريبية (Fallback)"}
- $("ms").textContent="المصدر: "+(S.times?S.source:"غير متاح");render()}
-
-function nowMin(tz){const p=new Intl.DateTimeFormat("en-GB",{timeZone:tz,hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"}).formatToParts(new Date()).reduce((a,x)=>(a[x.type]=+x.value,a),{});return p.hour*3600+p.minute*60+p.second}
-const sec=t=>{const[h,m]=t.split(":").map(Number);return h*3600+m*60};
-const fmt=s=>{s=Math.max(0,s);return[Math.floor(s/3600),Math.floor(s/60)%60,s%60].map(x=>String(x).padStart(2,"0")).join(":")};
-
-function render(){
- const T=S.times;if(!T){$("times").innerHTML="";$("st").textContent="لا توجد بيانات";$("tm").textContent="--:--:--";$("to").innerHTML="&nbsp;";return}
- const n=nowMin(S.city.tz||"UTC");let key="",st="",tgt="",total=1,rem=0;
- const im=sec(T.imsak||T.fajr),mg=sec(T.maghrib);
- if(n<im){st="قبل الإمساك";tgt="الإمساك";rem=im-n;total=im;key=T.imsak?"imsak":"fajr"}
- else if(n<mg){st=(mg-n<3600)?"قبل الإفطار":"وقت الصيام";tgt="الإفطار";rem=mg-n;total=mg-im;key="maghrib"}
- else{st="بعد الإفطار";tgt="الإمساك";rem=86400-n+im;total=86400-mg+im;key=T.imsak?"imsak":"fajr"}
- $("st").textContent=st;$("tm").textContent=fmt(rem);$("to").textContent="حتى "+tgt;
- $("arc").style.strokeDashoffset=339.3*Math.min(1,Math.max(0,rem/total));
- $("times").innerHTML=LBL.filter(([k])=>T[k]).map(([k,l])=>`<div class="t${k===key?" next":""}"><small>${l}</small><b>${T[k]}</b></div>`).join("");
+ const c=S.cities.find(x=>x.id===$("ci").value);if(!c)return;S.city=c;const m=$("me").value,tk=++S.tk,tz=c.tz||"UTC";
+ try{localStorage.setItem("aqx_loc",JSON.stringify({co:c.co,re:$("re").value,ci:c.id,me:m}))}catch(e){}
+ const now=new Date(),today=new Intl.DateTimeFormat("en-CA",{timeZone:tz}).format(now);
+ if(S.start){const d=Math.round((Date.parse(today)-Date.parse(S.start.s))/864e5);S.pre=d<0;S.day=Math.min(30,Math.max(1,d+1))}else{S.pre=true;S.day=1}
+ const me=S.methods.find(x=>x.id===m);
+ $("cta").href=`timetable.html?city=${encodeURIComponent(c.id)}&method=${encodeURIComponent(m)}`;
+ $("cn").textContent=c.name;$("cc").textContent=cname(c.co);$("dn").textContent=S.day;$("dl").textContent=S.pre?"معاينة اليوم 1":"يوم رمضان";
+ $("mm").textContent="الطريقة: "+(me?me.name||me.id:m);$("mz").textContent="المنطقة الزمنية: "+tz;$("ms").textContent="المصدر: AQX Prayer API";
+ const f=(l,o)=>new Intl.DateTimeFormat(l,{timeZone:tz,...o}).format(now);
+ $("dh").textContent=f("ar-SA-u-ca-islamic-umalqura",{dateStyle:"long"});$("dg").textContent=f("ar-EG",{dateStyle:"full"});
+ try{const p={city:c.id,method:m};
+  const[a,b]=await Promise.all([api("prayer",{...p,day:S.day}),S.day<30?api("prayer",{...p,day:S.day+1}).catch(()=>null):null]);
+  if(tk!==S.tk)return;S.times=parseTimes(a);S.tom=b?parseTimes(b):null;
+  if(!S.times.maghrib||!S.times.fajr)throw 0;unnote();render()
+ }catch(e){if(tk===S.tk)fail("تعذر تحميل مواقيت هذه المدينة من الخادم حاليًا.")}
 }
-$("co").onchange=()=>{fillCities();load()};$("ci").onchange=load;$("me").onchange=load;
+const sec=t=>{const[h,m]=t.split(":").map(Number);return h*3600+m*60};
+const fmt=s=>[Math.floor(s/3600),Math.floor(s/60)%60,s%60].map(x=>String(Math.max(0,x)).padStart(2,"0")).join(":");
+function nowSec(tz){const p=new Intl.DateTimeFormat("en-GB",{timeZone:tz,hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"}).formatToParts(new Date()).reduce((a,x)=>(a[x.type]=+x.value,a),{});return p.hour*3600+p.minute*60+p.second}
+function render(){
+ const T=S.times;
+ if(!T||!S.city){$("times").innerHTML="";$("st").textContent="لا توجد مواقيت معروضة";$("tm").textContent="--:--:--";$("to").innerHTML="&nbsp;";$("arc").style.strokeDashoffset=339.3;return}
+ const n=nowSec(S.city.tz||"UTC"),ev=ORDER.filter(k=>T[k]).map(k=>[k,sec(T[k])]);
+ let i=ev.findIndex(e=>e[1]>n),next,prev;
+ if(i<0){const k=ev[0][0];next=[k,sec((S.tom&&S.tom[k])||T[k])+86400];prev=ev[ev.length-1]}
+ else{next=ev[i];prev=i?ev[i-1]:[ev[ev.length-1][0],ev[ev.length-1][1]-86400]}
+ const im=sec(T.imsak||T.fajr),mg=sec(T.maghrib),rem=next[1]-n,span=next[1]-prev[1];
+ const stt=n<im?"قبل الإمساك":n<mg?(mg-n<3600?"قبل الإفطار":"وقت الصيام"):"بعد الإفطار";
+ $("st").textContent="الموعد القادم · "+stt;$("tm").textContent=fmt(rem);
+ $("to").textContent="حتى "+LBL.find(x=>x[0]===next[0])[1]+(i<0?" غدًا":"");
+ $("arc").style.strokeDashoffset=339.3*Math.min(1,Math.max(0,rem/span));
+ $("times").innerHTML=LBL.filter(([k])=>T[k]).map(([k,l])=>`<div class="t${k===next[0]?" next":""}"><small>${l}</small><b>${T[k]}</b></div>`).join("");
+}
+function parts(a,b){let m=(b.getFullYear()-a.getFullYear())*12+b.getMonth()-a.getMonth(),c=new Date(a);c.setMonth(c.getMonth()+m);if(c>b){m--;c=new Date(a);c.setMonth(c.getMonth()+m)}const r=Math.max(0,Math.floor((b-c)/1e3));return[m,Math.floor(r/86400),Math.floor(r/3600)%24,Math.floor(r/60)%60,r%60]}
+function tickRm(){
+ const s=S.start;if(!s){$("rt").textContent="موعد رمضان";$("rd").textContent="تاريخ بداية رمضان غير متاح حاليًا من الخادم.";return}
+ const t=new Date(s.s+"T00:00:00"),end=new Date(addDays(s.s,30)+"T00:00:00"),now=new Date(),live=now>=t;
+ const hy=new Intl.DateTimeFormat("ar-SA-u-ca-islamic-umalqura-nu-latn",{year:"numeric"}).format(t).replace(/\D/g,"");
+ const ds=new Intl.DateTimeFormat("ar-EG",{dateStyle:"full",timeZone:"UTC"}).format(new Date(s.s+"T00:00:00Z"));
+ $("hd").textContent=`رمضان ${hy} هـ · ${s.s.slice(0,4)} م`;
+ $("rt").textContent=live?`نحن الآن في رمضان ${hy} هـ`:`متبقٍ على رمضان ${hy} هـ`;
+ $("rd").textContent=live?`ينتهي الشهر بعد العدّاد التالي · بدأ يوم ${ds}`:`يبدأ يوم ${ds}`;
+ parts(now,live?end:t).forEach((v,i)=>$("u"+i).textContent=i>2?String(v).padStart(2,"0"):v);
+}
+$("co").onchange=()=>onCountry();$("re").onchange=()=>fillCities();$("ci").onchange=load;$("me").onchange=load;
+$("sh").onclick=async()=>{const u=location.origin+"/timetable.html?city="+encodeURIComponent(S.city?S.city.id:"")+"&method="+encodeURIComponent($("me").value);
+ try{if(navigator.share)await navigator.share({title:"إمساكية رمضان AQX",url:u});else{await navigator.clipboard.writeText(u);$("sh").textContent="تم نسخ الرابط ✓";setTimeout(()=>$("sh").textContent="مشاركة إمساكية مدينتك",2000)}}catch(e){}};
 const nav=$("nav"),sc=$("scrim"),mb=$("mb");
 function tg(o){nav.classList.toggle("open",o);sc.classList.toggle("on",o);mb.setAttribute("aria-expanded",o)}
 mb.onclick=()=>tg(!nav.classList.contains("open"));sc.onclick=()=>tg(false);
 document.addEventListener("keydown",e=>e.key==="Escape"&&tg(false));
-setInterval(render,1000);boot();
+const up=$("up");addEventListener("scroll",()=>up.classList.toggle("on",scrollY>420),{passive:true});
+up.onclick=()=>scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"});
+setInterval(()=>{render();tickRm()},1000);boot();
 </script>
 </body>
-                                                    </html>
+</html>
