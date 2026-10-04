@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /widget.html
-Sitemap: https://ramadan.alqurmanix.com/sitemap.xml
